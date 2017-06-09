@@ -6,6 +6,8 @@ import { NumberComponent } from './number/number.component';
 
 import { HttpModule } from '@angular/http';
 
+import { ClarityModule } from "clarity-angular";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -13,7 +15,8 @@ import { HttpModule } from '@angular/http';
   ],
   imports: [
     BrowserModule,
-    HttpModule
+    HttpModule,
+    ClarityModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

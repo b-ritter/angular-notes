@@ -18,21 +18,23 @@ export class NumberComponent implements OnInit {
       .map(res => res.json())
       .subscribe(wiki_data => {
         const data = wiki_data.pages.slice(1,-1);
-        const number_info = _.map(data, (item)=>{
-          let thumb = null;
-          if(item.hasOwnProperty('thumbnail')) {
-            if(item['thumbnail'].hasOwnProperty('source')) {
-              thumb = item['thumbnail']['source'];
-            }
-          }
+        const number_info = Object.entries(data).map(([key, value])=>{
+          let { 
+            'title': link,
+            'thumbnail': {
+              'source': source
+            }={'source': null},
+            'extract': description,
+            'normalizedtitle': title 
+          } = value;
   
           return {
-            title: item['normalizedtitle'],
-            link: item['title'],
-            description: item['extract'],
-            thumb: thumb
+            title: title,
+            link: link,
+            description: description,
+            thumb: source
           }
-        });
+        })
         this.number_data = number_info;
       })
   }
