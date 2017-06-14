@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
-import * as _ from "lodash";
 
 @Component({
   selector: 'app-number',
