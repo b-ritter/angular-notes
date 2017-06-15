@@ -5,13 +5,15 @@ import 'rxjs/add/operator/map';
 @Component({
   selector: 'app-number',
   templateUrl: './number.component.html',
-  styleUrls: ['./number.component.css']
+  styleUrls: ['./number.component.scss']
 })
 export class NumberComponent implements OnInit {
 
   number_data
-  base_url
-  constructor(http: Http) { 
+  base_url;
+  card_control:string;
+  constructor(http: Http) {
+    this.card_control = "card-columns";
     this.base_url = 'https://en.wikipedia.org/wiki/';
     http.get('https://en.wikipedia.org/api/rest_v1/page/related/imaginary')
       .map(res => res.json())
@@ -43,6 +45,25 @@ export class NumberComponent implements OnInit {
 
   link(item) {
     return this.base_url + item.link;
+  }
+
+  helloWorld(state:any = {}){
+    //document card columns
+   // const dcc = document.querySelector('.card-columns');
+    const cc = 'card-columns';
+    console.log(state);
+    switch(state.option){
+      case 'top-left':
+      case 'reset':
+        this.card_control = cc;
+      break;
+      case 'top-right':
+        this.card_control = cc +  ' top-right';
+      break;
+      case 'drape':
+        this.card_control = cc +  ' drape';
+      break;
+    }
   }
 
 }

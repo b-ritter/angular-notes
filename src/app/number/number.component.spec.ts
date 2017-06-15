@@ -22,4 +22,9 @@ describe('NumberComponent', () => {
   it('should be created', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should float top right and then back', ()=>{
+    component.helloWorld({option:'top-right'});
+    component.helloWorld({option:'reset'});
+  })
 });
