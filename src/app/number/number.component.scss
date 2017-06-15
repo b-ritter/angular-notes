@@ -1,0 +1,51 @@
+$card_background_color: rebeccapurple;
+.card {
+    background-color: $card_background_color;
+    color: white;
+    max-width: 400px;
+    .card-title {
+        padding-left: 5px;
+        font-size: 1.6em;
+        padding-top: 10px
+    }
+    hr:first-of-type {
+        width: 96%;
+        border-style: solid;
+        border-width: 1px;
+        border-color: pink;
+    }
+}
+
+.card-columns {
+    display: flex;
+    border: 2px solid olivedrab;
+    width: 100vw;
+    height: 80vh;
+    &.top-left {
+        justify-content: flex-start;
+    }
+    &.top-right {
+        justify-content: flex-end;
+    }
+    &.vertical-center {
+        justify-content: center;
+        align-items: center;
+    }
+    &.drape {
+        flex-direction: column;
+    }
+    &.norm-reverse {
+        flex-direction: row-reverse;
+    }
+    &.top-right-reverse {
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+    }
+    &.bottom-left {
+        align-items: flex-end;
+    }
+    &.bottom-right {
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+}
