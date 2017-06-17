@@ -54,11 +54,22 @@ export class NumberComponent implements OnInit {
     console.log(state);
     switch(state.option){
       case 'top-left':
-      case 'reset':
         this.card_control = cc;
       break;
       case 'top-right':
         this.card_control = cc +  ' top-right';
+      break;
+      case 'bottom-left':
+        this.card_control = cc +  ' bottom-left';
+      break;
+      case 'bottom-right':
+        this.card_control = cc +  ' bottom-right';
+      break;
+      case 'norm-reverse':
+        this.card_control = cc +  ' norm-reverse';
+      break;
+      case 'top-right-reverse':
+        this.card_control = cc +  ' top-right-reverse';
       break;
       case 'drape':
         this.card_control = cc +  ' drape';
