@@ -27,8 +27,12 @@ $card_background_color: rebeccapurple;
     &.top-right {
         justify-content: flex-end;
     }
-    &.vertical-center {
+    &.vertical-align {
         justify-content: center;
+        align-items: center;
+    }
+    &.vertical-align-even-space {
+        justify-content: space-between;
         align-items: center;
     }
     &.drape {

@@ -51,7 +51,9 @@ export class NumberComponent implements OnInit {
     //document card columns
    // const dcc = document.querySelector('.card-columns');
     const cc = 'card-columns';
-    console.log(state);
+
+    //keeping switch case in case combination cases need to be 
+    //supported in future renditions 
     switch(state.option){
       case 'top-left':
         this.card_control = cc;
@@ -73,6 +75,12 @@ export class NumberComponent implements OnInit {
       break;
       case 'drape':
         this.card_control = cc +  ' drape';
+      break;
+      case 'vertical-align':
+        this.card_control = cc +  ' vertical-align';
+      break;
+      case 'vertical-align-even-space':
+        this.card_control = cc +  ' vertical-align-even-space';
       break;
     }
   }
