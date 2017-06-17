@@ -1,8 +1,12 @@
-$card_background_color: rebeccapurple;
+$card_background_color: royalblue;
+$card_divider_color: tomato;
 .card {
     background-color: $card_background_color;
     color: white;
     max-width: 400px;
+    a{
+      color:white;
+    }
     .card-title {
         padding-left: 5px;
         font-size: 1.6em;
@@ -12,7 +16,11 @@ $card_background_color: rebeccapurple;
         width: 96%;
         border-style: solid;
         border-width: 1px;
-        border-color: pink;
+        border-color: $card_divider_color;
+    }
+    .card-image{
+      display:flex;
+      justify-content: center;
     }
 }
 
