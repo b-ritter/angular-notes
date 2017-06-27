@@ -1,13 +1,35 @@
-<div style="width:100%; height:20vh;">
-
-    <button (click)="toggle($event);emitTest('top-left')" class="btn btn-primary">top-left</button>
-    <button (click)="toggle($event);emitTest('top-right')" class="btn btn-primary">top-right</button>
-    <button (click)="toggle($event);emitTest('bottom-left')" class="btn btn-primary">bottom-left</button>
-    <button (click)="toggle($event);emitTest('bottom-right')" class="btn btn-primary">bottom-right</button>
-
-    <button (click)="toggle($event);emitTest('norm-reverse')" class="btn btn-primary">row reverse</button>
-    <button (click)="toggle($event);emitTest('top-right-reverse')" class="btn btn-primary">flex-end row reverse</button>
-    <button (click)="toggle($event);emitTest('drape')" class="btn btn-primary">drape</button>
-    <button (click)="toggle($event);emitTest('vertical-align')" class="btn btn-primary">vertical align</button>
-    <button (click)="toggle($event);emitTest('vertical-align-even-space')" class="btn btn-primary">vertical align even spacing</button>
-</div>
+<section class="sidenav-content">
+    <section class="nav-group collapsable">
+        <input id="flexbox-demo" type="checkbox">
+        <label for="flexbox-demo">Flexbox</label>
+        <ul class="nav-list">
+            <li>
+                <a class="nav-link active" (click)="toggle($event);emitTest('top-left')">top-left</a>
+            </li>
+            <li>
+                <a class="nav-link" (click)="toggle($event);emitTest('top-right')">top-right</a>
+            </li>
+            <li>
+                <a class="nav-link" (click)="toggle($event);emitTest('bottom-left')">bottom-left</a>
+            </li>
+            <li>
+                <a class="nav-link" (click)="toggle($event);emitTest('bottom-right')">bottom-right</a>
+            </li>
+            <li>
+                <a class="nav-link" (click)="toggle($event);emitTest('norm-reverse')">row reverse</a>
+            </li>
+            <li>
+                <a class="nav-link" (click)="toggle($event);emitTest('top-right-reverse')">flex-end row reverse</a>
+            </li>
+            <li>
+                <a class="nav-link" (click)="toggle($event);emitTest('drape')">drape</a>
+            </li>
+            <li>
+                <a class="nav-link" (click)="toggle($event);emitTest('vertical-align')">vertical align</a>
+            </li>
+            <li>
+                <a class="nav-link" (click)="toggle($event);emitTest('vertical-align-even-space')">vertical align even spacing</a>
+            </li>
+        </ul>
+    </section>
+</section>

@@ -18,6 +18,8 @@ export class ControlPanelComponent implements OnInit {
   }
   
   resetAllActive(){
+    // TODO(Ben): We should be able to rely on clarity's 'active' property to activate selected link
+    // Let's add the class with: https://angular.io/api/router/RouterLinkActive
     Array.prototype.slice.call(document.querySelectorAll('.btn-secondary'), 0).forEach((target)=>{
       target.className = target.className.replace('btn-secondary', '');
       target.className = target.className.concat(' btn-primary');
@@ -25,10 +27,10 @@ export class ControlPanelComponent implements OnInit {
   }
 
   toggle(evt){
-    this.resetAllActive();
-   // if(evt.target.className.includes('btn-primary')){
-      evt.target.className = evt.target.className.replace('btn-primary', '');
-      evt.target.className = evt.target.className.concat(' btn-secondary');
+  //   this.resetAllActive();
+  //  // if(evt.target.className.includes('btn-primary')){
+  //     evt.target.className = evt.target.className.replace('btn-primary', '');
+  //     evt.target.className = evt.target.className.concat(' btn-secondary');
   }
 
   emitTest(test_option: string){

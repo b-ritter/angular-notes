@@ -1,19 +1,24 @@
-<app-control-panel (change)="helloWorld($event)"></app-control-panel>
-<div [class]="card_control">
-    <div *ngFor="let number of number_data">
-        <div class="card">
-            <div class="card-title">
-                <a href="{{link(number)}}">{{number.title}}</a>
-            </div>
-            <hr>
-            <div class="card-image">
-                <img src="{{number.thumb}}" />
-            </div>
-            <div class="card-block">
-                <div class="card-text">
-                    {{number.description}}
+
+ <div class="content-area">
+    <div [class]="card_control">
+        <div *ngFor="let number of number_data">
+            <div class="card">
+                <div class="card-title">
+                    <a href="{{link(number)}}">{{number.title}}</a>
+                </div>
+                <hr>
+                <div class="card-image">
+                    <img src="{{number.thumb}}" />
+                </div>
+                <div class="card-block">
+                    <div class="card-text">
+                        {{number.description}}
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+ </div>
+ <nav class="sidenav">
+     <app-control-panel (change)="helloWorld($event)"></app-control-panel>
+ </nav>
