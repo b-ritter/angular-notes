@@ -18,19 +18,16 @@ export class ControlPanelComponent implements OnInit {
   }
   
   resetAllActive(){
-    // TODO(Ben): We should be able to rely on clarity's 'active' property to activate selected link
-    // Let's add the class with: https://angular.io/api/router/RouterLinkActive
-    Array.prototype.slice.call(document.querySelectorAll('.btn-secondary'), 0).forEach((target)=>{
-      target.className = target.className.replace('btn-secondary', '');
-      target.className = target.className.concat(' btn-primary');
+    // TODO(Ben): Make sure we reset nav links each submenu only 
+    Array.prototype.slice.call(document.querySelectorAll('.nav-link'), 0).forEach((target)=>{
+      console.log(target);
+      target.className = 'nav-link';
     });
   }
 
   toggle(evt){
-  //   this.resetAllActive();
-  //  // if(evt.target.className.includes('btn-primary')){
-  //     evt.target.className = evt.target.className.replace('btn-primary', '');
-  //     evt.target.className = evt.target.className.concat(' btn-secondary');
+    this.resetAllActive();
+    evt.target.className = 'nav-link active';
   }
 
   emitTest(test_option: string){
