@@ -1,0 +1,8 @@
+@import '../../../styles.scss';
+$nav-link-active-background: $neutral-nav-link-background;
+
+a {
+    &.nav-link.active {
+        background-color: $nav-link-active-background !important;
+    }
+}

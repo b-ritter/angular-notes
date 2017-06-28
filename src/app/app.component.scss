@@ -1,0 +1,9 @@
+@import '../styles.scss';
+
+$header-background: $neutral-header-background;
+
+header {
+    &.header {
+        background-color: $header-background;
+    }
+}
