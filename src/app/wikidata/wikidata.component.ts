@@ -4,12 +4,12 @@ import 'rxjs/add/operator/map';
 
 @Component({
   selector: 'app-number',
-  templateUrl: './number.component.html',
-  styleUrls: ['./number.component.scss']
+  templateUrl: './wikidata.component.html',
+  styleUrls: ['./wikidata.component.scss']
 })
-export class NumberComponent implements OnInit {
+export class WikidataComponent implements OnInit {
 
-  number_data
+  wikidata
   base_url;
   card_control:string;
   constructor(http: Http) {
@@ -36,7 +36,7 @@ export class NumberComponent implements OnInit {
             thumb: source
           }
         })
-        this.number_data = number_info;
+        this.wikidata = number_info;
       })
   }
 

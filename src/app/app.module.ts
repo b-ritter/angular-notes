@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { NumberComponent } from './number/number.component';
+import { WikidataComponent } from './wikidata/wikidata.component';
 
 import { HttpModule } from '@angular/http';
 
@@ -12,7 +12,7 @@ import { ControlPanelComponent } from './components/control-panel/control-panel.
 @NgModule({
   declarations: [
     AppComponent,
-    NumberComponent,
+    WikidataComponent,
     ControlPanelComponent
   ],
   imports: [

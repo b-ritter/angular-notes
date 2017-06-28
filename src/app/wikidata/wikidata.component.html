@@ -1,18 +1,18 @@
 
  <div class="content-area">
     <div [class]="card_control">
-        <div *ngFor="let number of number_data">
+        <div *ngFor="let entry of wikidata">
             <div class="card">
                 <div class="card-title">
-                    <a href="{{link(number)}}">{{number.title}}</a>
+                    <a href="{{link(entry)}}">{{entry.title}}</a>
                 </div>
                 <hr>
                 <div class="card-image">
-                    <img src="{{number.thumb}}" />
+                    <img src="{{entry.thumb}}" />
                 </div>
                 <div class="card-block">
                     <div class="card-text">
-                        {{number.description}}
+                        {{entry.description}}
                     </div>
                 </div>
             </div>
