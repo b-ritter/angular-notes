@@ -7,4 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  themeClasses = {};
+  switchTheme(state:any = {}){
+    console.log(state);
+    this.themeClasses = {
+      'neutral': state.option === 'neutral'
+    }
+  }
 }

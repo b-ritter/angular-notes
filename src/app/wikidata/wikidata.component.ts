@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Output, OnInit, EventEmitter } from '@angular/core';
 import { Http } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/filter';
 
 @Component({
-  selector: 'app-number',
+  selector: 'wikidata',
   templateUrl: './wikidata.component.html',
   styleUrls: ['./wikidata.component.scss']
 })
@@ -16,7 +16,7 @@ export class WikidataComponent implements OnInit {
   link_base:string = "https://en.wikipedia.org/wiki/";
   card_control:string;
   cardContainerClasses = {};
-  themeClasses = {};
+  @Output() themeUpdate = new EventEmitter();
   constructor(http: Http) {
     this.http = http;
   }
@@ -79,9 +79,7 @@ export class WikidataComponent implements OnInit {
     }
   }
 
-  switchTheme(state:any = {}){
-    this.themeClasses = {
-      'neutral': state.option === 'neutral'
-    }
+  updateTheme(event) {
+    this.themeUpdate.emit(event)
   }
 }

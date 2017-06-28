@@ -39,6 +39,7 @@ $card-header-color: $neutral-card-header-text;
 @mixin custom-flex {
     display: flex;
     flex-wrap: wrap;
+    height: 90vh;
 }
 
 @mixin card-width {

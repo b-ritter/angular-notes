@@ -1,12 +1,12 @@
 <!--The whole content below can be removed with the new code.-->
-<clr-main-container>
-  <clr-header>
+<clr-main-container [ngClass]="themeClasses" >
+  <clr-header class="header header-4">
     <div class="branding">
-      <a href="..." class="nav-link">
+      <a href="..." class="logo-and-title">
+        <span class="title">Sass and Flexbox</span>
       </a>
-      <span class="title">Sass and Flexbox</span>
     </div>
   </clr-header>
-  <app-number class="content-container"></app-number>
+  <wikidata class="content-container" (themeUpdate)="switchTheme($event)"></wikidata>
 </clr-main-container>
 

@@ -2,8 +2,11 @@
 
 $header-background: $neutral-header-background;
 
-header {
-    &.header {
-        background-color: $header-background;
+.main-container .neutral {
+    header {
+        &.header {
+            background-color: $header-background;
+        }
     }
 }
+
