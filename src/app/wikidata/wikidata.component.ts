@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Http } from '@angular/http';
+import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/filter';
 
 @Component({
   selector: 'app-number',
@@ -10,7 +12,7 @@ import 'rxjs/add/operator/map';
 export class WikidataComponent implements OnInit {
   http;
   wikidata;
-  base_url;
+  base_url:string = "https://en.wikipedia.org/api/rest_v1/page/related/";
   card_control:string;
   constructor(http: Http) {
     this.http = http;
@@ -18,30 +20,40 @@ export class WikidataComponent implements OnInit {
 
   ngOnInit():void {
     this.card_control = "card-columns";
-    this.base_url = 'https://en.wikipedia.org/wiki/';
-    this.http.get('https://en.wikipedia.org/api/rest_v1/page/related/imaginary')
-      .map(res => res.json())
-      .subscribe(wiki_data => {
-        const data = wiki_data.pages.slice(1,-1);
-        const number_info = Object.entries(data).map(([key, value])=>{
-          let { 
-            'title': link,
-            'thumbnail': {
-              'source': source
-            }={'source': null},
-            'extract': description,
-            'normalizedtitle': title 
-          } = value;
-  
-          return {
-            title: title,
-            link: link,
-            description: description,
-            thumb: source
-          }
-        })
-        this.wikidata = number_info;
-      })
+    //TODO(Ben): Let's use a few different search terms
+    this.search('number')
+      .subscribe((res)=> this.wikidata = res);
+  }
+
+  search(term: string): Observable<object[]>{
+    return this.http
+        .get(this.base_url + term)
+        .map(res => {
+          const wiki_data = res.json();
+          return Object.entries(wiki_data.pages).map(
+            ([key, value])=>{
+              let { 
+                'title': link,
+                'thumbnail': {
+                  'source': source
+                }={'source': null},
+                'extract': description,
+                'normalizedtitle': title 
+              } = value;
+
+              return {
+                title,
+                link,
+                description,
+                source
+              }
+          })
+          .filter(entry => {
+            if (!entry.description.includes("may refer to")) {
+              return entry;
+            }
+          });
+        });
   }
 
   link(item) {
