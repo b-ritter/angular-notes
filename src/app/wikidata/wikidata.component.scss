@@ -6,7 +6,7 @@ $card-background: $neutral-card-background;
 .card {
     background-color: $card-background;
     color: white;
-    width: 20vw;
+    // width: 20vw;
     a{
       color:white;
     }
@@ -26,40 +26,51 @@ $card-background: $neutral-card-background;
     }
 }
 
-.card-columns {
+@mixin custom-flex {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    height: 80vh;
+}
+.card-columns {
     &.top-left {
+        @include custom-flex;
         justify-content: flex-start;
     }
-    &.top-right {
-        justify-content: flex-end;
-    }
-    &.vertical-align {
-        justify-content: center;
-        align-items: center;
-    }
-    &.vertical-align-even-space {
-        justify-content: space-between;
-        align-items: center;
-    }
-    &.drape {
-        flex-direction: column;
-    }
-    &.norm-reverse {
-        flex-direction: row-reverse;
-    }
-    &.top-right-reverse {
-        flex-direction: row-reverse;
-        justify-content: flex-end;
-    }
-    &.bottom-left {
-        align-items: flex-end;
-    }
-    &.bottom-right {
-        justify-content: flex-end;
-        align-items: flex-end;
-    }
 }
+// .card-columns {
+//     display: flex;
+//     flex-wrap: wrap;
+//     width: 100%;
+//     height: 80vh;
+//     &.top-left {
+//         justify-content: flex-start;
+//     }
+//     &.top-right {
+//         justify-content: flex-end;
+//     }
+//     &.vertical-align {
+//         justify-content: center;
+//         align-items: center;
+//     }
+//     &.vertical-align-even-space {
+//         justify-content: space-between;
+//         align-items: center;
+//     }
+//     &.drape {
+//         flex-direction: column;
+//     }
+//     &.norm-reverse {
+//         flex-direction: row-reverse;
+//     }
+//     &.top-right-reverse {
+//         flex-direction: row-reverse;
+//         justify-content: flex-end;
+//     }
+//     &.bottom-left {
+//         align-items: flex-end;
+//     }
+//     &.bottom-right {
+//         justify-content: flex-end;
+//         align-items: flex-end;
+//     }
+// }
