@@ -1,5 +1,5 @@
 
- <div class="content-area">
+ <div class="content-area" [ngClass]="themeClasses">
     <div [ngClass]="cardContainerClasses">
         <div *ngFor="let entry of wikidata">
             <div class="card">
@@ -20,5 +20,5 @@
     </div>
  </div>
  <nav class="sidenav" [clr-nav-level]="1">
-     <app-control-panel (change)="changeCardStyle($event)"></app-control-panel>
+     <app-control-panel (change)="changeCardStyle($event)" (switchTheme)="switchTheme($event)"></app-control-panel>
  </nav>

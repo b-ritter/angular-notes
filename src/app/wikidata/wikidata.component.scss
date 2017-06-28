@@ -1,34 +1,38 @@
 @import '../../styles.scss';
 
-$card_divider_color: tomato;
 $card-background: $neutral-card-background;
 $content-area-background: $neutral-content-area-background;
 $card-text-color: $neutral-card-text;
 $card-header-color: $neutral-card-header-text;
 
-.content-area {
-    background-color: $content-area-background;
+.neutral {
+    .card {
+        color: $card-text-color;
+        background-color: $card-background;
+        a{
+            color:$card-header-color;
+        }
+    }
+    .content-area {
+        background-color: $content-area-background;
+    }
 }
 
+
 .card {
-    color: $card-text-color;
-    background-color: $card-background;
-    a{
-      color:$card-header-color;
-    }
     .card-title {
         padding-left: 5px;
         font-size: 1.6em;
         padding-top: 10px
     }
-    hr:first-of-type {
-        border-style: solid;
-        border-width: 1px;
-        border-color: $card_divider_color;
-    }
     .card-image{
       display:flex;
       justify-content: center;
+      img {
+        object-fit: contain;
+        max-width: 100%;
+      }
+      
     }
 }
 
@@ -40,7 +44,7 @@ $card-header-color: $neutral-card-header-text;
 @mixin card-width {
     .card {
         width: 24vw;
-        height: 40vh;
+        height: 30vh;
         overflow: hidden;
     }
 }

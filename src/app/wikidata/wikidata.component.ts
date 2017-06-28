@@ -16,6 +16,7 @@ export class WikidataComponent implements OnInit {
   link_base:string = "https://en.wikipedia.org/wiki/";
   card_control:string;
   cardContainerClasses = {};
+  themeClasses = {};
   constructor(http: Http) {
     this.http = http;
   }
@@ -78,10 +79,9 @@ export class WikidataComponent implements OnInit {
     }
   }
 
-  changeThemeColor(state:any = {}){
-    // TODO(Ben): set this up like above
-    // We'll have to set a class on the body 
-    // which will determine the style inheritance
-    // of the child components
+  switchTheme(state:any = {}){
+    this.themeClasses = {
+      'neutral': state.option === 'neutral'
+    }
   }
 }

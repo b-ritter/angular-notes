@@ -1,5 +1,17 @@
 <section class="sidenav-content">
     <section class="nav-group collapsable">
+        <input id="sass-demo" type="checkbox">
+        <label for="sass-demo">Sass</label>
+        <ul class="nav-list">
+            <li>
+                <a class="nav-link active" (click)="toggle($event);emitThemeSwitch('')">Clarity default colors</a>
+            </li>
+            <li>
+                <a class="nav-link" (click)="toggle($event);emitThemeSwitch('neutral')">Neutral palette</a>
+            </li>
+        </ul>
+    </section>
+    <section class="nav-group collapsable">
         <input id="flexbox-demo" type="checkbox">
         <label for="flexbox-demo">Flexbox</label>
         <ul class="nav-list">
