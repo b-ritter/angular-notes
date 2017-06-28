@@ -78,4 +78,10 @@ export class WikidataComponent implements OnInit {
     }
   }
 
+  changeThemeColor(state:any = {}){
+    // TODO(Ben): set this up like above
+    // We'll have to set a class on the body 
+    // which will determine the style inheritance
+    // of the child components
+  }
 }
