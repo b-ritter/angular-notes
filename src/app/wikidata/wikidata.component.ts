@@ -8,14 +8,18 @@ import 'rxjs/add/operator/map';
   styleUrls: ['./wikidata.component.scss']
 })
 export class WikidataComponent implements OnInit {
-
-  wikidata
+  http;
+  wikidata;
   base_url;
   card_control:string;
   constructor(http: Http) {
+    this.http = http;
+  }
+
+  ngOnInit():void {
     this.card_control = "card-columns";
     this.base_url = 'https://en.wikipedia.org/wiki/';
-    http.get('https://en.wikipedia.org/api/rest_v1/page/related/imaginary')
+    this.http.get('https://en.wikipedia.org/api/rest_v1/page/related/imaginary')
       .map(res => res.json())
       .subscribe(wiki_data => {
         const data = wiki_data.pages.slice(1,-1);
@@ -38,9 +42,6 @@ export class WikidataComponent implements OnInit {
         })
         this.wikidata = number_info;
       })
-  }
-
-  ngOnInit() {
   }
 
   link(item) {
