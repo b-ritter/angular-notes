@@ -24,7 +24,7 @@ export class WikidataComponent implements OnInit {
     //TODO(Ben): Let's use a few different search terms
     this.search('number')
       .subscribe((res)=> this.wikidata = res);
-    this.helloWorld({});
+    this.changeCardStyle({});
   }
 
   search(term: string): Observable<object[]>{
@@ -62,45 +62,18 @@ export class WikidataComponent implements OnInit {
     return this.base_url + item.link;
   }
 
-  helloWorld(state:any = {}){
-    //document card columns
-   // const dcc = document.querySelector('.card-columns');
-    // const cc = 'card-columns';
-
-    //keeping switch case in case combination cases need to be 
-    //supported in future renditions 
-    // switch(state.option){
-    //   case 'top-left':
-    //     this.card_control = cc;
-    //   break;
-    //   case 'top-right':
-    //     this.card_control = cc +  ' top-right';
-    //   break;
-    //   case 'bottom-left':
-    //     this.card_control = cc +  ' bottom-left';
-    //   break;
-    //   case 'bottom-right':
-    //     this.card_control = cc +  ' bottom-right';
-    //   break;
-    //   case 'norm-reverse':
-    //     this.card_control = cc +  ' norm-reverse';
-    //   break;
-    //   case 'top-right-reverse':
-    //     this.card_control = cc +  ' top-right-reverse';
-    //   break;
-    //   case 'drape':
-    //     this.card_control = cc +  ' drape';
-    //   break;
-    //   case 'vertical-align':
-    //     this.card_control = cc +  ' vertical-align';
-    //   break;
-    //   case 'vertical-align-even-space':
-    //     this.card_control = cc +  ' vertical-align-even-space';
-    //   break;
-    // }
+  changeCardStyle(state:any = {}){
     this.cardContainerClasses = {
       'card-columns': true,
-      'top-left': state.option === 'top-left'
+      'top-left': state.option === 'top-left',
+      'top-right': state.option === 'top-right',
+      'vertical-align': state.option === 'vertical-align',
+      'vertical-align-even-space': state.option === 'vertical-align-even-space',
+      'drape': state.option === 'drape',
+      'norm-reverse': state.option === 'norm-reverse',
+      'top-right-reverse': state.option === 'top-right-reverse',
+      'bottom-left': state.option === 'bottom-left',
+      'bottom-right': state.option === 'bottom-right'
     }
   }
 

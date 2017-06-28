@@ -4,7 +4,10 @@
         <label for="flexbox-demo">Flexbox</label>
         <ul class="nav-list">
             <li>
-                <a class="nav-link active" (click)="toggle($event);emitTest('top-left')">top-left</a>
+                <a class="nav-link active" (click)="toggle($event);emitTest('')">Clairty default</a>
+            </li>
+            <li>
+                <a class="nav-link" (click)="toggle($event);emitTest('top-left')">top-left</a>
             </li>
             <li>
                 <a class="nav-link" (click)="toggle($event);emitTest('top-right')">top-right</a>
