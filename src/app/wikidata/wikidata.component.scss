@@ -5,18 +5,7 @@ $content-area-background: $neutral-content-area-background;
 $card-text-color: $neutral-card-text;
 $card-header-color: $neutral-card-header-text;
 
-.neutral {
-    .card {
-        color: $card-text-color;
-        background-color: $card-background;
-        a{
-            color:$card-header-color;
-        }
-    }
-    .content-area {
-        background-color: $content-area-background;
-    }
-}
+
 
 
 .card {
@@ -33,6 +22,19 @@ $card-header-color: $neutral-card-header-text;
         max-width: 100%;
       }
       
+    }
+}
+
+.main-container.neutral {
+    .card {
+        color: $card-text-color;
+        background-color: $card-background;
+        a{
+            color:$card-header-color;
+        }
+    }
+    .content-area {
+        background-color: $content-area-background;
     }
 }
 

@@ -1,11 +1,9 @@
 @import '../../../styles.scss';
 $nav-link-active-background: $neutral-nav-link-background;
 
-.neutral {
-    a {
-        &.nav-link.active {
-            background-color: $nav-link-active-background !important;
-        }
+.main-container.neutral {
+    .sidenav .nav-group .nav-list .nav-link.active {
+        background-color: $nav-link-active-background !important;
     }
 }
 

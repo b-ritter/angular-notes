@@ -1,4 +1,4 @@
-import { Component, Output, OnInit, EventEmitter } from '@angular/core';
+import { Component, Output, OnInit, EventEmitter, ViewEncapsulation } from '@angular/core';
 import { Http } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
@@ -7,7 +7,8 @@ import 'rxjs/add/operator/filter';
 @Component({
   selector: 'wikidata',
   templateUrl: './wikidata.component.html',
-  styleUrls: ['./wikidata.component.scss']
+  styleUrls: ['./wikidata.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class WikidataComponent implements OnInit {
   http;
