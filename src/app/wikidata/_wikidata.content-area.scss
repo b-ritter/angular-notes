@@ -1,0 +1,63 @@
+@mixin contentArea($theme) {
+    .content-area {
+        background-color: map-get($theme, content-area-background);
+    }
+}
+
+@mixin custom-flex {
+    display: flex;
+    flex-wrap: wrap;
+    height: 90vh;
+}
+
+.card-columns {
+    &.top-left {
+        @include custom-flex;
+        justify-content: flex-start;
+        @include card-width;
+    }
+    &.top-right {
+        @include custom-flex;
+        justify-content: flex-end;
+        @include card-width;
+    }
+    &.vertical-align {
+        @include custom-flex;
+        justify-content: center;
+        align-items: center;
+        @include card-width;
+    }
+    &.vertical-align-even-space {
+        @include custom-flex;
+        justify-content: space-between;
+        align-items: center;
+        @include card-width;
+    }
+    &.drape {
+        @include custom-flex;
+        flex-direction: column;
+        @include card-width;
+    }
+    &.norm-reverse {
+        @include custom-flex;
+        flex-direction: row-reverse;
+        @include card-width;
+    }
+    &.top-right-reverse {
+        @include custom-flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        @include card-width;
+    }
+    &.bottom-left {
+        @include custom-flex;
+        align-items: flex-end;
+        @include card-width;
+    }
+    &.bottom-right {
+        @include custom-flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        @include card-width;
+    }
+}

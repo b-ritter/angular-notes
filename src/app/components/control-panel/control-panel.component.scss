@@ -1,9 +1,20 @@
 @import '../../../styles.scss';
-$nav-link-active-background: $neutral-nav-link-background;
 
-.main-container.neutral {
-    .sidenav .nav-group .nav-list .nav-link.active {
-        background-color: $nav-link-active-background !important;
-    }
+@mixin navLinks($theme) {
+    .sidenav .nav-group .nav-list {
+        .nav-link.active, .nav-link.active:hover {
+            background-color: map-get($theme, nav-link-background) !important;
+        }
+        .nav-link:hover {
+            background-color: map-get($theme, nav-link-hover-background) !important;
+        }
+    } 
 }
 
+.main-container.neutral {
+    @include navLinks($neutral)
+}
+
+.main-container.warm {
+    @include navLinks($warm)
+}

@@ -1,0 +1,33 @@
+.card {
+    .card-title {
+        padding-left: 5px;
+        font-size: 1.6em;
+        padding-top: 10px
+    }
+    .card-image{
+      display:flex;
+      justify-content: center;
+      img {
+        object-fit: contain;
+        max-width: 90%;
+      }
+      
+    }
+}
+
+@mixin card($theme) {
+    .card {
+        background-color: map-get($theme, card-background);
+        a{
+            color: map-get($theme, card-header-text);
+        }
+    }
+}
+
+@mixin card-width {
+    .card {
+        width: 24vw;
+        height: 30vh;
+        overflow: hidden;
+    }
+}

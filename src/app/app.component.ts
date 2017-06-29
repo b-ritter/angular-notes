@@ -10,9 +10,9 @@ export class AppComponent {
   title = 'app';
   themeClasses = {};
   switchTheme(state:any = {}){
-    console.log(state);
     this.themeClasses = {
-      'neutral': state.option === 'neutral'
+      'neutral': state.option === 'neutral',
+      'warm': state.option === 'warm'
     }
   }
 }

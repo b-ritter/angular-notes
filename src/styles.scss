@@ -1,6 +1,20 @@
-$neutral-header-background: #ccc;
-$neutral-card-background: #fff;
-$neutral-card-text: #999;
-$neutral-nav-link-background: #bbb;
-$neutral-content-area-background: #efefef;
-$neutral-card-header-text: #0c0c0c;
+
+$neutral: (
+    header-background: #747474,
+    card-background: #fff,
+    nav-link-background: #CCCCCC,
+    nav-link-hover-background: #EEEEEE,
+    content-area-background: #FAFAFA,
+    card-header-text: #313131,
+    body-text: #313131
+);
+
+$warm: (
+    header-background: #CD3517,
+    card-background: #fff,
+    nav-link-background: #FF8142,
+    nav-link-hover-background: #FFCCB5,
+    content-area-background: #efefef,
+    card-header-text: #CD3517,
+    body-text: #495A67
+);
