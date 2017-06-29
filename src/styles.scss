@@ -20,7 +20,11 @@ $themes: (
     )
 );
 
+@function get-theme($theme) {
+    @return map-get($themes, $theme);
+}
+
 @function get-theme-prop($theme, $prop) {
-    $theme: map-get($themes, $theme);
+    $theme: get-theme($theme);
     @return map-get($theme, $prop);
 }

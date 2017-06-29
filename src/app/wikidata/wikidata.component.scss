@@ -3,13 +3,14 @@
 @import '_wikidata.card.scss';
 @import '_wikidata.content-area.scss';
 
-.main-container.neutral {
-    @include card('neutral');
-    @include contentArea('neutral');
+@mixin wikiContent($theme-name) {
+    @include card($theme-name);
+    @include contentArea($theme-name);
 }
 
-.main-container.warm {
-    @include card('warm');
-    @include contentArea('warm');
+@each $theme in map-keys($themes) {
+    .main-container.#{$theme} {
+        @include wikiContent($theme)
+    }
 }
 

@@ -11,10 +11,8 @@
     } 
 }
 
-.main-container.neutral {
-    @include navLinks('neutral')
-}
-
-.main-container.warm {
-    @include navLinks('warm')
+@each $theme in map-keys($themes) {
+    .main-container.#{$theme} {
+        @include navLinks($theme);
+    }
 }
