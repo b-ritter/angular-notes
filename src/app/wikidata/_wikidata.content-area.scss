@@ -1,6 +1,6 @@
 @mixin contentArea($theme) {
     .content-area {
-        background-color: map-get($theme, content-area-background);
+        background-color: get-theme-prop($theme, content-area-background);
     }
 }
 

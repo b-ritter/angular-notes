@@ -4,12 +4,12 @@
 @import '_wikidata.content-area.scss';
 
 .main-container.neutral {
-    @include card($neutral);
-    @include contentArea($neutral);
+    @include card('neutral');
+    @include contentArea('neutral');
 }
 
 .main-container.warm {
-    @include card($warm);
-    @include contentArea($warm);
+    @include card('warm');
+    @include contentArea('warm');
 }
 

@@ -3,18 +3,18 @@
 @mixin navLinks($theme) {
     .sidenav .nav-group .nav-list {
         .nav-link.active, .nav-link.active:hover {
-            background-color: map-get($theme, nav-link-background) !important;
+            background-color: get-theme-prop($theme, nav-link-background) !important;
         }
         .nav-link:hover {
-            background-color: map-get($theme, nav-link-hover-background) !important;
+            background-color: get-theme-prop($theme, nav-link-hover-background) !important;
         }
     } 
 }
 
 .main-container.neutral {
-    @include navLinks($neutral)
+    @include navLinks('neutral')
 }
 
 .main-container.warm {
-    @include navLinks($warm)
+    @include navLinks('warm')
 }

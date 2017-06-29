@@ -17,9 +17,9 @@
 
 @mixin card($theme) {
     .card {
-        background-color: map-get($theme, card-background);
+        background-color: get-theme-prop($theme, card-background);
         a{
-            color: map-get($theme, card-header-text);
+            color: get-theme-prop($theme, card-header-text);
         }
     }
 }

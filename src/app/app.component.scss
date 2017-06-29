@@ -1,19 +1,19 @@
 @import '../styles.scss';
 
 @mixin appStyles($theme) {
-    color: map-get($theme, body-text);
+    color: get-theme-prop($theme, body-text);
     .header.header-4 {
         .title {
             font-size: 24px;
         }
-        background-color: map-get($theme, header-background);
+        background-color: get-theme-prop($theme, header-background);
     }
 }
 
 .main-container.neutral {
-    @include appStyles($neutral)
+    @include appStyles('neutral')
 }
 
 .main-container.warm {
-    @include appStyles($warm)
+    @include appStyles('warm')
 }
