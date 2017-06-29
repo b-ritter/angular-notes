@@ -8,12 +8,14 @@ import { HttpModule } from '@angular/http';
 
 import { ClarityModule } from "clarity-angular";
 import { ControlPanelComponent } from './components/control-panel/control-panel.component';
+import { EntryComponent } from './wikidata/entry/entry.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     WikidataComponent,
-    ControlPanelComponent
+    ControlPanelComponent,
+    EntryComponent
   ],
   imports: [
     BrowserModule,

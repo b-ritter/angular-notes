@@ -2,20 +2,7 @@
  <div class="content-area">
     <div [ngClass]="cardContainerClasses">
         <div *ngFor="let entry of wikidata">
-            <div class="card">
-                <div class="card-title">
-                    <a href="{{link(entry)}}">{{entry.title}}</a>
-                </div>
-                <hr>
-                <div class="card-image">
-                    <img src="{{entry.source}}" />
-                </div>
-                <div class="card-block">
-                    <div class="card-text">
-                        {{entry.description}}
-                    </div>
-                </div>
-            </div>
+            <entry [entry]="entry"></entry>
         </div>
     </div>
  </div>

@@ -14,7 +14,6 @@ export class WikidataComponent implements OnInit {
   http;
   wikidata;
   base_url:string = "https://en.wikipedia.org/api/rest_v1/page/related/";
-  link_base:string = "https://en.wikipedia.org/wiki/";
   card_control:string;
   cardContainerClasses = {};
   @Output() themeUpdate = new EventEmitter();
@@ -59,10 +58,6 @@ export class WikidataComponent implements OnInit {
             }
           });
         });
-  }
-
-  link(item) {
-    return this.link_base + item.link;
   }
 
   changeCardStyle(state:any = {}){
