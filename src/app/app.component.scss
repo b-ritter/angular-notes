@@ -1,6 +1,4 @@
 @import '../styles.scss';
-
-
 @mixin appStyles($theme) {
     .main-container.#{$theme} {
         color: get-theme-prop($theme, body-text);
@@ -12,7 +10,7 @@
             background-color: get-theme-prop($theme, header-background-color);
             $gradient: get-theme-prop($theme, header-background-gradient);
             @debug $gradient;
-            @if $gradient != none {
+            @if $gradient !=none {
                 background: $gradient;
             }
         }
