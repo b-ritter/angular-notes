@@ -1,5 +1,6 @@
 @import '../styles.scss';
 
+
 @mixin appStyles($theme) {
     .main-container.#{$theme} {
         color: get-theme-prop($theme, body-text);
@@ -7,7 +8,13 @@
             .title {
                 font-size: 24px;
             }
-            background-color: get-theme-prop($theme, header-background);
+            flex-basis: get-theme-prop($theme, header-height);
+            background-color: get-theme-prop($theme, header-background-color);
+            $gradient: get-theme-prop($theme, header-background-gradient);
+            @debug $gradient;
+            @if $gradient != none {
+                background: $gradient;
+            }
         }
     }
 }

@@ -12,7 +12,8 @@ export class AppComponent {
   switchTheme(state:any = {}){
     this.themeClasses = {
       'neutral': state.option === 'neutral',
-      'warm': state.option === 'warm'
+      'warm': state.option === 'warm',
+      'madThad': state.option === 'madThad'
     }
   }
 }

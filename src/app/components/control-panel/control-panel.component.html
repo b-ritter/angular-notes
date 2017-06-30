@@ -4,13 +4,16 @@
         <label for="sass-demo">Sass</label>
         <ul class="nav-list">
             <li>
-                <a class="nav-link active" (click)="toggle($event);emitThemeSwitch('')">Clarity default colors</a>
+                <a class="nav-link active" (click)="toggle($event);emitThemeSwitch('')">Clarity Default Colors</a>
             </li>
             <li>
                 <a class="nav-link" (click)="toggle($event);emitThemeSwitch('neutral')">Neutral palette</a>
             </li>
             <li>
                 <a class="nav-link" (click)="toggle($event);emitThemeSwitch('warm')">Warm palette</a>
+            </li>
+            <li>
+                <a class="nav-link" (click)="toggle($event);emitThemeSwitch('madThad')">Thad</a>
             </li>
         </ul>
     </section>

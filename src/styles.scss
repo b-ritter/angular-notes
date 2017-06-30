@@ -1,22 +1,38 @@
 $themes: (
     'neutral': (
-        header-background: #747474,
+        header-background-color: #747474,
+        header-background-gradient: none,
         card-background: #fff,
         nav-link-background: #CCCCCC,
         nav-link-hover-background: #EEEEEE,
         content-area-background: #FAFAFA,
         card-header-text: #313131,
-        body-text: #313131
+        body-text: #313131,
+        header-height: none
     ),
 
     'warm': (
-        header-background: #CD3517,
+        header-background-color: #CD3517,
+        header-background-gradient: none,
         card-background: #fff,
         nav-link-background: #FF8142,
         nav-link-hover-background: #FFCCB5,
         content-area-background: #efefef,
         card-header-text: #CD3517,
-        body-text: #495A67
+        body-text: #495A67,
+        header-height: none
+    ),
+
+    'madThad': (
+        header-background-color: #CD3517,
+        header-background-gradient: linear-gradient(180deg,#25333D, #798893),
+        card-background: #fff,
+        nav-link-background: #798893,
+        nav-link-hover-background: #D9E4EA,
+        content-area-background: #F3F6FA,
+        card-header-text: #25333D,
+        body-text: #25333D,
+        header-height: 20vh
     )
 );
 
