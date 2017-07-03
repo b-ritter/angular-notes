@@ -34,7 +34,9 @@
         @include card-width;
     }
     &.drape {
-        @include custom-flex;
+        /* @include custom-flex; */
+        display: flex;
+        height: 90vh;
         flex-direction: column;
         @include card-width;
     }
