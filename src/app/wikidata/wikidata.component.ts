@@ -24,7 +24,7 @@ export class WikidataComponent implements OnInit {
   ngOnInit():void {
     this.card_control = "card-columns";
     //TODO(Ben): Let's use a few different search terms
-    this.search('number')
+    this.search('cats')
       .subscribe((res)=> this.wikidata = res);
     this.changeCardStyle({});
   }
