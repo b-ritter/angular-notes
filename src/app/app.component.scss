@@ -1,4 +1,4 @@
-@import '../styles.scss';
+@import '~styles.scss';
 @mixin appStyles($theme) {
     .main-container.#{$theme} {
         color: get-theme-prop($theme, body-text);
